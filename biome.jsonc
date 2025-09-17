@@ -1,6 +1,22 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  "extends": [
-    "ultracite"
-  ]
+  "extends": ["ultracite"],
+
+  "linter": {
+    "rules": {
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      },
+      "suspicious": {
+        "noArrayIndexKey": "off"
+      },
+      "nursery": {
+        "noShadow": "off",
+        "useConsistentTypeDefinitions": "off"
+      },
+      "style": {
+        "useConsistentArrayType": "off"
+      }
+    }
+  }
 }
