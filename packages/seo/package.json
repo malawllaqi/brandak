@@ -17,5 +17,8 @@
     "@types/react-dom": "^19.1.5",
     "@workspace/typescript-config": "workspace:*",
     "next": "15.3.2"
+  },
+  "exports": {
+    "./metadata": "./metadata.ts"
   }
 }

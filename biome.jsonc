@@ -16,6 +16,9 @@
       },
       "style": {
         "useConsistentArrayType": "off"
+      },
+      "performance": {
+        "noNamespaceImport": "off"
       }
     }
   }

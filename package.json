@@ -5,7 +5,11 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "lint": "turbo lint"
+    "lint": "turbo lint",
+    "db:migrate": "cd packages/db && pnpm drizzle-kit migrate",
+    "db:generate": "cd packages/db && pnpm drizzle-kit generate",
+    "db:pull": "cd packages/db && pnpm drizzle-kit pull",
+    "db:push": "cd packages/db && pnpm drizzle-kit push"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.2",

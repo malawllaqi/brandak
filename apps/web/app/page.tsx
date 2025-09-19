@@ -9,6 +9,7 @@ export const metadata: Metadata = createMetadata({
     "Generate stunning, professional logos instantly with Brandak’s AI powered logo maker. No design skills required — just your vision and our technology.",
   image: "/my-page-image.png",
 });
+
 export default function Page() {
   return (
     <div className="relative">
