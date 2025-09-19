@@ -1,4 +1,3 @@
-import { db } from "@workspace/db";
 import { createMetadata } from "@workspace/seo/metadata";
 import type { Metadata } from "next";
 import { HeroSection } from "./_components/hero";
@@ -11,14 +10,7 @@ export const metadata: Metadata = createMetadata({
   image: "/my-page-image.png",
 });
 
-export const getData = async () => {
-  const data = await db.query.logo.findMany();
-  return data;
-};
-export default async function Page() {
-  const data = await getData();
-
-  console.log(data);
+export default function Page() {
   return (
     <div className="relative">
       <SiteHeader />
