@@ -1,5 +1,7 @@
+import { auth } from "@workspace/auth/server";
 import { createMetadata } from "@workspace/seo/metadata";
 import type { Metadata } from "next";
+import { currentUser } from "@/lib/auth";
 import { HeroSection } from "./_components/hero";
 import { SiteHeader } from "./_components/site-header";
 
@@ -10,7 +12,10 @@ export const metadata: Metadata = createMetadata({
   image: "/my-page-image.png",
 });
 
-export default function Page() {
+export default async function Page() {
+  const session = await currentUser();
+
+  console.log(session);
   return (
     <div className="relative">
       <SiteHeader />

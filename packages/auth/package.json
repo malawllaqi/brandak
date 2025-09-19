@@ -21,7 +21,8 @@
     "typescript": "^5.9.2"
   },
   "exports": {
-    "server": "./server.ts",
-    "client": "./client.ts"
+    "./server": "./server.ts",
+    "./client": "./client.ts",
+    "./handlers": "./handlers.ts"
   }
 }

@@ -1,7 +1,11 @@
+"use client";
+import { useSession } from "@workspace/auth/client";
 import { Button } from "@workspace/ui/components/button";
 import { Dice1 } from "lucide-react";
 
 export function SiteHeader() {
+  const session = useSession();
+
   return (
     <header className="sticky top-0 w-full">
       <nav className="mx-auto flex max-w-6xl animate-fade-up items-center justify-between py-4">
@@ -11,9 +15,15 @@ export function SiteHeader() {
         </div>
 
         <div className="flex items-center space-x-6">
-          <Button size={"sm"} variant={"outline"}>
-            Dashboard
-          </Button>
+          {session.data ? (
+            <Button size={"sm"} variant={"outline"}>
+              Dashboard
+            </Button>
+          ) : (
+            <Button size={"sm"} variant={"outline"}>
+              Sign-in
+            </Button>
+          )}
         </div>
       </nav>
     </header>

@@ -3,6 +3,9 @@
   "compilerOptions": {
     "baseUrl": "."
   },
+  "paths": {
+    "@workspace/*": ["./*"]
+  },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules", "dist"]
 }

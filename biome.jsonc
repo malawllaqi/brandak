@@ -18,7 +18,8 @@
         "useConsistentArrayType": "off"
       },
       "performance": {
-        "noNamespaceImport": "off"
+        "noNamespaceImport": "off",
+        "noBarrelFile": "off"
       }
     }
   }
